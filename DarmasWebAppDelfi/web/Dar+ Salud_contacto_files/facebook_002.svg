@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="42" viewBox="0 0 44 42">
+  <g id="Grupo_1558" data-name="Grupo 1558" transform="translate(-4183 -273)">
+    <g id="Grupo_1555" data-name="Grupo 1555" transform="translate(197 -167)">
+      <g id="Elipse_521" data-name="Elipse 521" transform="translate(3990 442)" fill="#fff" stroke="rgba(112,112,112,0.01)" stroke-width="1">
+        <ellipse cx="19.5" cy="19" rx="19.5" ry="19" stroke="none"/>
+        <ellipse cx="19.5" cy="19" rx="19" ry="18.5" fill="none"/>
+      </g>
+      <g id="Grupo_1175" data-name="Grupo 1175" transform="translate(3988 442)">
+        <path id="Trazado_1051" data-name="Trazado 1051" d="M390.052,166.7h0a19.1,19.1,0,0,1-19.1-19.1h0a19.1,19.1,0,0,1,19.1-19.1h0a19.1,19.1,0,0,1,19.1,19.1h0A19.1,19.1,0,0,1,390.052,166.7Z" transform="translate(-370.955 -128.505)" fill="none" stroke="#1d1b4c" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Trazado_1052" data-name="Trazado 1052" d="M387.095,159.121h4.649V147.478h3.243l.346-3.9h-3.589v-2.22c0-.919.184-1.283,1.073-1.283h2.516v-4.045h-3.218c-3.459,0-5.02,1.523-5.02,4.44v3.108h-2.418v3.947h2.418Z" transform="translate(-370.906 -128.478)" fill="#1d1b4c"/>
+      </g>
+    </g>
+    <rect id="Rectángulo_1155" data-name="Rectángulo 1155" width="44" height="42" transform="translate(4183 273)" fill="none"/>
+  </g>
+</svg>

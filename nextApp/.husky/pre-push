@@ -1,0 +1,15 @@
+#!/bin/bash
+BRANCH_NAME=$(git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3)
+
+
+echo "pre-push script for origin branch $BRANCH_NAME"
+
+if [ "$BRANCH_NAME" = "develop" ]; then
+ echo "Skipping lint and build demo since the target branch is 'developer'."
+
+else
+  cd frontend
+  npm run build
+ 
+fi
+

@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react-hooks"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": ["generated"],
+  "rules": {
+    "react/prop-types": "off",
+    "no-console": "warn",
+    "react-hooks/rules-of-hooks": "error", // For checking rules of hooks
+    "react-hooks/exhaustive-deps": "warn" // For checking hook dependencies
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

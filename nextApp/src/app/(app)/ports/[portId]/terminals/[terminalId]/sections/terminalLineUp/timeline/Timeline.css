@@ -1,0 +1,202 @@
+.terminal-timeline {
+  .vis-item-content {
+    padding: 0px;
+  }
+  .vis-item {
+    background-color: #ffffff; /* Color de fondo (blanco en este caso) */
+  }
+  .vis-timeline {
+    --border-color: #e5e7eb;
+    --custom-time-color: #1a8479;
+    --current-time-color: #df2d2d;
+    --status-first-color: #67cd6b;
+    --status-passage-color: #d9e1e0;
+
+    border: 0 !important;
+
+    .vis-item,
+    .vis-item-overflow {
+      display: flex;
+      align-items: center;
+
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
+    .vis-tooltip {
+      border-radius: 0.375rem;
+      border: 1px solid #e5e7eb;
+      background-color: #fff;
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      padding: 0.5rem 1rem;
+      font-family: inherit;
+
+      .title {
+        font-weight: 600;
+        color: #000;
+      }
+    }
+    .vis-time-axis {
+      cursor: pointer;
+    }
+
+    .vis-text.vis-major > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      text-align: center;
+
+      .major-second-row-date {
+        margin: 3px 0;
+      }
+      .today-row {
+        font-size: 14px;
+        color: #fff;
+        background-color: #00c5b7;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+      }
+    }
+
+    .vis-grid {
+      border-color: var(--border-color) !important;
+    }
+
+    .vis-major {
+      padding: 30px 0 60px 25px !important;
+    }
+
+    .vis-labelset {
+      width: 175px;
+    }
+
+    .axis-diag {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .axis-diag::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+      z-index: -1;
+    }
+
+    .vis-axis-legend {
+      width: 175px;
+
+      div {
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        padding: 35px 40px 0px 0px;
+      }
+
+      div:first-child {
+        display: flex;
+        flex-direction: column;
+
+        span:first-child {
+          font-weight: bold;
+          align-self: flex-start;
+          padding-left: 13px;
+        }
+
+        span:last-child {
+          align-self: flex-end;
+          padding-right: 13px;
+        }
+      }
+
+      div:nth-child(2) {
+        padding: 20px 13px;
+
+        span:first-child {
+          border-right: 1px solid #000;
+          padding-right: 13px;
+        }
+
+        span:last-child {
+          padding-left: 13px;
+        }
+      }
+
+      div span:only-child {
+        margin: 10px 0 !important;
+      }
+    }
+  }
+
+  .vis-timeline {
+    .vis-item {
+      min-height: 45px;
+      color: #000000;
+    }
+
+    .others {
+      width: 100%;
+      background-color: #9a80ff;
+    }
+    .operated {
+      width: 100%;
+      background-color: rgba(0, 193, 210, 1);
+    }
+    .partner {
+      width: 100%;
+      background-color: rgba(245, 188, 92, 1);
+    }
+
+    .operated-future {
+      width: 100%;
+      background-color: rgba(0, 193, 210, 0.5);
+      border: 2px dotted #2461ff !important;
+    }
+    .partner-future {
+      width: 100%;
+      background-color: rgba(245, 188, 92, 0.5);
+      border: 2px dotted #e08d00 !important;
+    }
+    .others-future {
+      width: 100%;
+      background-color: #ccbfff;
+      border: 2px dotted #4c1eff !important;
+    }
+  }
+
+  .vis-label.group-others {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vis-label.group-operated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vis-label.group-partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

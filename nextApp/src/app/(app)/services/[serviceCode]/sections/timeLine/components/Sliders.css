@@ -1,0 +1,148 @@
+.services {
+  .vis-timeline {
+    --border-color: #e5e7eb;
+    --custom-time-color: #1a8479;
+    --current-time-color: #df2d2d;
+    --status-first-color: #67cd6b;
+    --status-passage-color: #d9e1e0;
+
+    .day-slider {
+      position: absolute !important;
+      cursor: "pointer" !important;
+      top: -165px !important;
+      max-height: 100px !important;
+      min-width: 45px !important;
+      background-color: rgba(0, 197, 183, 0.1) !important;
+      div {
+        position: absolute !important;
+        width: 100% !important;
+      }
+      width: 86px;
+
+      @media (min-width: 1575px) {
+        width: 90px;
+      }
+      @media (min-width: 1640px) {
+        width: 99px;
+      }
+      @media (min-width: 1730px) {
+        width: 104px;
+      }
+    }
+
+    .month-slider-31days {
+      position: absolute !important;
+      width: 115px;
+      cursor: "pointer" !important;
+      top: -165px !important;
+      max-height: 100px !important;
+      min-width: 45px !important;
+      background-color: rgba(0, 197, 183, 0.1) !important;
+      div {
+        position: absolute !important;
+        width: 100% !important;
+      }
+      @media (min-width: 1000px) {
+        width: 115px;
+      }
+      @media (min-width: 1600px) {
+        width: 120px;
+      }
+      @media (min-width: 1645px) {
+        width: 130px;
+      }
+      @media (min-width: 1730px) {
+        width: 137px;
+      }
+    }
+    .month-slider {
+      position: absolute !important;
+      cursor: "pointer" !important;
+      top: -165px !important;
+      max-height: 100px !important;
+      min-width: 45px !important;
+      background-color: rgba(0, 197, 183, 0.1) !important;
+      div {
+        position: absolute !important;
+        width: 100% !important;
+      }
+      @media (min-width: 0px) {
+        width: 112px;
+      }
+      @media (min-width: 1540px) {
+        width: 116px;
+      }
+      @media (min-width: 1570px) {
+        width: 120px;
+      }
+      @media (min-width: 1600px) {
+        width: 122px;
+      }
+      @media (min-width: 1630px) {
+        width: 124px;
+      }
+
+      @media (min-width: 1660px) {
+        width: 127px;
+      }
+      @media (min-width: 1680px) {
+        width: 130px;
+      }
+      @media (min-width: 1710px) {
+        width: 132px;
+      }
+      @media (min-width: 1730px) {
+        width: 134px;
+      }
+      @media (min-width: 1750px) {
+        width: 136px;
+      }
+      @media (min-width: 1770px) {
+        width: 138px;
+      }
+    }
+    .feb-slider {
+      position: absolute !important;
+
+      cursor: "pointer" !important;
+      top: -165px !important;
+      max-height: 100px !important;
+      min-width: 45px !important;
+      background-color: rgba(0, 197, 183, 0.1) !important;
+      div {
+        position: absolute !important;
+        width: 100% !important;
+      }
+      @media (min-width: 0px) {
+        width: 110px;
+      }
+      @media (min-width: 1580px) {
+        width: 115px;
+      }
+      @media (min-width: 1630px) {
+        width: 120px;
+      }
+      @media (min-width: 1680px) {
+        width: 125px;
+      }
+      @media (min-width: 1710px) {
+        width: 127px;
+      }
+      @media (min-width: 1730px) {
+        width: 129px;
+      }
+    }
+    .right-border-slider.vis-custom-time {
+      background-color: rgba(0, 197, 184, 0.846) !important;
+      top: -150px !important;
+      cursor: default;
+      z-index: 1;
+    }
+    .left-border-slider.vis-custom-time {
+      background-color: rgba(0, 197, 184, 0.846) !important;
+      top: -150px !important;
+      cursor: default;
+      z-index: 2;
+    }
+  }
+}

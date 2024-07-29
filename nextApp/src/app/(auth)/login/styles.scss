@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+[data-amplify-container] {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 11px #ccc;
+}
+
+[data-amplify-router] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button.amplify-button--primary {
+  @apply bg-primary;
+
+  &:hover {
+    @apply bg-primary/80;
+  }
+}

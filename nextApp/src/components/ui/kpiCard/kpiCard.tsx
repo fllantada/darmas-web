@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { AlertCircle } from "lucide-react";
 
-import { LoadingState } from "@/lib/types";
-import { cn, isNotNullOrUndefined } from "@/lib/utils";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import InfoIcon from "@/components/icons/info";
+import { LoadingState } from "@/app/plataform/lib/types";
+import { cn, isNotNullOrUndefined } from "@/app/plataform/lib/utils";
 
 import { Skeleton } from "../skeleton";
 import { TrendElement } from "./trendElement";

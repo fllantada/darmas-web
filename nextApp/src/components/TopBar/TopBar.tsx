@@ -1,6 +1,5 @@
-import { BreadcrumbsComponent } from "@/contexts/BreadcrumbContext";
-
-import { cn } from "@/lib/utils";
+import { BreadcrumbsComponent } from "@/app/plataform/contexts/BreadcrumbContext";
+import { cn } from "@/app/plataform/lib/utils";
 
 type TopBarProps = {
   className?: string;

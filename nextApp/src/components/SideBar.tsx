@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import AlertsIcon from "@/components/icons/alerts";
 import DashboardIcon from "@/components/icons/dashboard";
@@ -14,6 +13,7 @@ import ServicesIcon from "@/components/icons/services";
 import SettingsIcon from "@/components/icons/settings";
 import SlideLeft from "@/components/icons/slideLeft";
 import VesselIcon from "@/components/icons/vessel";
+import { cn } from "@/app/plataform/lib/utils";
 
 import ChevronDownIcon from "./icons/chevronDown";
 
@@ -65,7 +65,7 @@ export default function SideBar({
             height={30}
             alt="OneOcean"
           />
-          <h2 className="text-xs italic mt-1">Seaborne Insights</h2>
+          <h2 className="text-xs italic mt-1">Reportes Darmas</h2>
         </div>
         <Button
           variant="link"

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { cn } from "@/app/plataform/lib/utils";
 
 import type { PortWithVessel } from "./types";
 import Vessel from "./Vessel";

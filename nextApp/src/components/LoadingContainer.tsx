@@ -1,8 +1,8 @@
 import React from "react";
 import { AlertCircle, CircleDashed } from "lucide-react";
 
-import { LoadingState } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { LoadingState } from "@/app/plataform/lib/types";
+import { cn } from "@/app/plataform/lib/utils";
 
 type LoadingContainerProps = {
   state: LoadingState;

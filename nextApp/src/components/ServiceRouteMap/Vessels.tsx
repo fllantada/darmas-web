@@ -1,4 +1,4 @@
-import { linearZoomInterpolation } from "@/lib/mapUtils";
+import { linearZoomInterpolation } from "@/app/plataform/lib/mapUtils";
 
 import Vessel, { type VeseelForMap } from "./Vessel";
 

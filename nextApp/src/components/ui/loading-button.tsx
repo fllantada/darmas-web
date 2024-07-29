@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AlertTriangle, CircleDashed } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/plataform/lib/utils";
 
 import { Button, type ButtonProps } from "./button";
 

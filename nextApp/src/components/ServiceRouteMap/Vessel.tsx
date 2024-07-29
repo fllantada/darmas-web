@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import type { VesselType } from "@/generated/graphql";
-import {
-  calculateRotationType,
-  RotationType,
-} from "@/globalDomain/rotationTypes";
 import { Marker } from "react-map-gl";
 
 import VesselMarker from "@/components/icons/vesselMarker";
+import {
+  calculateRotationType,
+  RotationType,
+} from "@/app/plataform/globalDomain/rotationTypes";
 
 export type VeseelForMap = VesselType & {
   latestPosition: {

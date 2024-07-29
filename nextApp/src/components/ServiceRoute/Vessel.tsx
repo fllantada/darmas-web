@@ -1,11 +1,11 @@
 import { VesselType } from "@/generated/graphql";
 
-import { cn } from "@/lib/utils";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { cn } from "@/app/plataform/lib/utils";
 
 import VesselTopViewIcon from "../icons/vesselTopView";
 

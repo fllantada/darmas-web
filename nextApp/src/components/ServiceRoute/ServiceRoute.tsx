@@ -2,7 +2,7 @@ import { memo } from "react";
 import type { VesselType, VoyageType } from "@/generated/graphql";
 import { AlertCircle } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/plataform/lib/utils";
 
 import Port from "./Port";
 import type { PortWithVessel } from "./types";

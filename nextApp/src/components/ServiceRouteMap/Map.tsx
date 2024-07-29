@@ -6,7 +6,7 @@ import type { VesselType } from "@/generated/graphql";
 import { featureCollection, point } from "@turf/helpers";
 import type { ViewStateChangeEvent } from "react-map-gl";
 
-import { LoadingState } from "@/lib/types";
+import { LoadingState } from "@/app/plataform/lib/types";
 import { mapStyles } from "@/app/theme";
 
 import { LoadingContainer } from "../LoadingContainer";

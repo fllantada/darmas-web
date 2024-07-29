@@ -1,4 +1,4 @@
-import { cn, isNotNullOrUndefined } from "@/lib/utils";
+import { cn, isNotNullOrUndefined } from "@/app/plataform/lib/utils";
 
 import TrendDownIcon from "../../icons/trendDown";
 import TrendUpIcon from "../../icons/trendUp";

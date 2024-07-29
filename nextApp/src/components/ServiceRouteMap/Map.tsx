@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import type { VesselType } from "@/generated/graphql";
 import { featureCollection, point } from "@turf/helpers";
 import type { ViewStateChangeEvent } from "react-map-gl";
 
@@ -27,7 +26,7 @@ const NavigationControl = dynamic(
 
 type ServiceRouteMapProps = {
   className?: string;
-  vessels: VesselType[];
+  vessels: any[];
   labelsAlwaysVisible?: boolean;
   mapStyle: keyof typeof mapStyles;
 };

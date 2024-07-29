@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { PortType, TerminalType } from "@/generated/graphql";
 import { CircleDashed } from "lucide-react";
 
 import { cn } from "@/app/plataform/lib/utils";
@@ -15,8 +14,8 @@ import "@/../node_modules/flag-icons/css/flag-icons.min.css";
 
 type HeadingProps = {
   className?: string;
-  terminal: TerminalType;
-  port: PortType;
+  terminal: any;
+  port: any;
 };
 
 export default function Heading({ className, terminal, port }: HeadingProps) {
@@ -50,13 +49,14 @@ export default function Heading({ className, terminal, port }: HeadingProps) {
               name: terminal.terminalCode,
               code: terminal.terminalCode,
             }}
-            terminals={
+            terminals={[]}
+            /*   terminals={
               port.terminals?.map(t => ({
                 id: t.id,
                 code: t.terminalCode,
                 name: t.terminalName,
               })) || []
-            }
+            } */
             onNavigateToTerminal={onNavigateToTerminal}
             disabled={loading}
           />

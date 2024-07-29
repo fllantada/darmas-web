@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Contact as ApiContact } from "@/generated/graphql";
 import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/app/plataform/lib/utils";
@@ -9,7 +8,7 @@ import { cn } from "@/app/plataform/lib/utils";
 import Contact from "./Contact";
 
 interface IProps {
-  contacts: ApiContact[];
+  contacts: any[];
 }
 
 export default function PointsOfContact({ contacts }: IProps) {

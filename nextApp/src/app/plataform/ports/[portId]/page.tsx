@@ -19,8 +19,6 @@ import PortIntroduction from "./sections/portIntroduction/PortIntroduction";
 import PortHeaderKpisSC from "./sections/portKpis/PortHeaderKpisSC";
 import { PortHeaderKpisSkeleton } from "./sections/portKpis/skeletons/PortHeaderKpisSkeleton";
 import { PortLineUpSC } from "./sections/portLineUp/PortLineUpSC";
-import MapError from "./sections/PortMap/error";
-import PortMap from "./sections/PortMap/Map";
 import { PortActivitiesOverview } from "./sections/vesselActivities/VesselActivities";
 import VesselActivitiesSC from "./sections/vesselActivities/VesselActivitiesSC";
 
@@ -98,11 +96,7 @@ export default async function PortPage({ params: { portId } }: PortPageProps) {
           <Suspense fallback={<PortHeaderKpisSkeleton />}>
             <PortHeaderKpisSC portId={portId} />
           </Suspense>
-          <div className="bg-white border-2 rounded-md border-[#DBDCDF] h-[400px] mt-3 p-2">
-            <ErrorBoundary errorComponent={MapError}>
-              <PortMap port={activePort} />
-            </ErrorBoundary>
-          </div>
+          <div className="bg-white border-2 rounded-md border-[#DBDCDF] h-[400px] mt-3 p-2"></div>
           <div className="bg-slate-200 h-[365px] mt-3 p-2">More Kpis</div>
         </div>
       </div>

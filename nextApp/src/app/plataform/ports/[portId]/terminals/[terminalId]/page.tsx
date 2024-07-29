@@ -1,23 +1,18 @@
 import { Suspense } from "react";
-import type { Metadata } from "next";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import { notFound } from "next/navigation";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTitle,
 } from "@/components/ui/collapsible";
-import { CrumbSetter } from "@/app/plataform/contexts/BreadcrumbContext";
 
 /* import { EventLogSC } from "../../sections/eventLog/EventLogSC";
 import { EventLogSkeleton } from "../../sections/eventLog/EventLogSkeleton"; */
-import BerthList from "./components/BerthList";
+
 import Heading from "./components/Heading";
 import { TerminalFacilities } from "./sections/facilities/TerminalFacilities";
 import { HeaderKpiSection } from "./sections/headerKpis/TerminalHeaderKpis";
-import MapError from "./sections/PortMap/error";
-import TerminalMap from "./sections/PortMap/Map";
 import { TerminalLineUpSC } from "./sections/terminalLineUp/TerminalLineUpSC";
 import { TermialLineUpSkeleton } from "./sections/terminalLineUp/TerminalLineUpSkeleton";
 
@@ -28,14 +23,14 @@ interface TerminalPageProps {
   };
 }
 
-export async function generateMetadata({
+/* export async function generateMetadata({
   params: { terminalId, portId },
 }: TerminalPageProps): Promise<Metadata> {
   return {};
-}
+} */
 
 export default async function TerminalPage({
-  params: { terminalId, portId },
+  params: { terminalId },
 }: TerminalPageProps) {
   const terminal = {} as any;
   const portInfo = {} as any;
@@ -55,9 +50,6 @@ export default async function TerminalPage({
               <CollapsibleTitle>
                 <h2>Berth</h2>
               </CollapsibleTitle>
-              <CollapsibleContent>
-                <BerthList terminal={terminal} port={portInfo} />
-              </CollapsibleContent>
             </Collapsible>
           </div>
           <div className="mt-4 p-3 border-b-[1px] border-[#DBDCDF]">
@@ -73,11 +65,7 @@ export default async function TerminalPage({
         <div className="flex-auto">
           <HeaderKpiSection terminalId={terminal.id} />
 
-          <div className="bg-white border-2 rounded-md border-[#DBDCDF] h-[400px] mt-3 p-2">
-            <ErrorBoundary errorComponent={MapError}>
-              <TerminalMap terminal={terminal} />
-            </ErrorBoundary>
-          </div>
+          <div className="bg-white border-2 rounded-md border-[#DBDCDF] h-[400px] mt-3 p-2"></div>
         </div>
       </div>
       <div className="p-2 mt-3 bg-white rounded-md min-h-[1000px]">

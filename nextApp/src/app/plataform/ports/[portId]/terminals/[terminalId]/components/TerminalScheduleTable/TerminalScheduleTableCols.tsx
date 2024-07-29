@@ -1,6 +1,5 @@
 "use client";
 
-import { TerminalDataEntry } from "@/data/port";
 import { ColumnDef } from "@tanstack/react-table";
 
 const ColHeader = ({ title }: { title: string }) => {
@@ -11,7 +10,7 @@ const ColHeader = ({ title }: { title: string }) => {
   );
 };
 
-export const columns: ColumnDef<TerminalDataEntry>[] = [
+export const columns: ColumnDef<any>[] = [
   {
     accessorKey: "vesselId",
     header: () => <ColHeader title="Vessel" />,

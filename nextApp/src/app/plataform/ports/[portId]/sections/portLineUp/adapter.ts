@@ -1,6 +1,5 @@
 "use server";
 
-import { VesselPortEvent } from "@/generated/graphql";
 import moment from "moment";
 
 import { RotationType } from "@/app/plataform/globalDomain/rotationTypes";
@@ -12,11 +11,11 @@ import {
 import { TVesselArrivingPort } from "./domain/interfaces";
 
 export const serverToDomainArrivingVesselAdapter = (
-  serverArrivingVessels: VesselPortEvent[],
+  serverArrivingVessels: any[],
 ): TVesselArrivingPort[] => {
   const vesselsArriving: TVesselArrivingPort[] = [];
 
-  serverArrivingVessels.forEach((vessel: VesselPortEvent) => {
+  serverArrivingVessels.forEach((vessel: any) => {
     if (
       isNullOrUndefined(vessel.arrivalTime) ||
       isNullOrUndefined(vessel.departureTime)

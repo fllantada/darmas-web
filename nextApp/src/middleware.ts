@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AmplifyServerContextSpec } from "@aws-amplify/core/dist/esm/adapterCore/serverContext/types";
-import { fetchAuthSession } from "aws-amplify/auth/server";
+
+/* import { fetchAuthSession } from "aws-amplify/auth/server"; */
 
 import { runWithAmplifyServerContext } from "@/app/plataform/utils/AmplifyServerUtils";
 
@@ -10,6 +11,7 @@ export async function middleware(request: NextRequest) {
   const authenticated = await runWithAmplifyServerContext({
     nextServerContext: { request, response },
     operation: async (contextSpec: AmplifyServerContextSpec) => {
+      console.log(contextSpec);
       try {
         // The fetch will grab the session cookies
         /*      const session = await fetchAuthSession(contextSpec, {}); */

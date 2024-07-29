@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export const HomeScripts = () => {
   return (
-    <Script>
+    <Script id={"ES-id-unico"}>
       {`
         console.log('Home Scripts');
         `}

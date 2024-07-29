@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import type { PortOverlayChartType } from "@/generated/graphql";
 import { BarChart, BarSeriesOption } from "echarts/charts";
 import {
   GridComponent,
@@ -49,7 +48,7 @@ const baseChartOptions: EChartsOption = {
   },
 };
 
-type ChartVesselType = Omit<PortOverlayChartType, "__typename">;
+type ChartVesselType = Omit<any, "__typename">;
 
 export type VesselTurnaroundChartProps = {
   vessels: ChartVesselType[];

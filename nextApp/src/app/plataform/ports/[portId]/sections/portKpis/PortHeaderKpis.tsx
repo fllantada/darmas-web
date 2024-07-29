@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import type { BaseKpiType } from "@/generated/graphql";
 
 import { useKpiCardInteractions } from "@/app/plataform/customHooks/useKpiCardInteractions";
 import { BaseKpiDisplayValues, LoadingState } from "@/app/plataform/lib/types";
@@ -17,7 +16,7 @@ import VesselTurnaroundOverlay from "./charts/vesselTurnaround/VesselTurnaround"
 
 export type DisplayKpiDataItem = {
   display: BaseKpiDisplayValues;
-  data: BaseKpiType | undefined | null;
+  data: any | undefined | null;
 };
 
 type DisplayKpiData = {

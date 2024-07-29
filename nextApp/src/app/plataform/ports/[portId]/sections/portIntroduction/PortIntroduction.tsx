@@ -1,10 +1,9 @@
-import { PortType } from "@/generated/graphql";
 import { Globe } from "lucide-react";
 
 import PointOfContact from "./ controls/PointsOfContact";
 
 type PortIntroductionProps = {
-  port: PortType;
+  port: any;
   className?: string;
 };
 

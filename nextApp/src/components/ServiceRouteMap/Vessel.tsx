@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import type { VesselType } from "@/generated/graphql";
 import { Marker } from "react-map-gl";
 
 import VesselMarker from "@/components/icons/vesselMarker";
@@ -8,7 +7,7 @@ import {
   RotationType,
 } from "@/app/plataform/globalDomain/rotationTypes";
 
-export type VeseelForMap = VesselType & {
+export type VeseelForMap = any & {
   latestPosition: {
     latitude: number;
     longitude: number;

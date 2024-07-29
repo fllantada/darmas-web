@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-
 import {
   Collapsible,
   CollapsibleContent,
@@ -13,13 +11,12 @@ import { Pilotage } from "./components/pilotage/Pilotage";
 import { Tugs } from "./components/tugs/Tugs";
 import { YardEquipment } from "./components/yardEquipment/YardEquipment";
 import { YardInformation } from "./components/yardInformation/YardInformation";
-import { useTerminalFacilities } from "./useTerminalFacilities";
 
 interface IProps {
   terminalId: string;
 }
 
-export function TerminalFacilities({ terminalId }: IProps) {
+export function TerminalFacilities({}: IProps) {
   /*   useEffect(() => {
     getTerminalFacilities(terminalId).then(faclities =>
       useTerminalFacilities.getState().initializeTerminalFacilities(faclities),

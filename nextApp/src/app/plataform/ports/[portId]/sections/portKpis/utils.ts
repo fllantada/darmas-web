@@ -1,5 +1,3 @@
-import type { BaseKpiType } from "@/generated/graphql";
-
 import { BaseKpiDisplayValues } from "@/app/plataform/lib/types";
 import {
   isNotNullOrUndefined,
@@ -7,7 +5,7 @@ import {
 } from "@/app/plataform/lib/utils";
 
 export function getVesselTurnaroundDisplayValues(
-  data: BaseKpiType | undefined | null,
+  data: any | undefined | null,
 ): BaseKpiDisplayValues {
   return {
     actual: isNotNullOrUndefined(data?.actual)
@@ -30,7 +28,7 @@ export function getVesselTurnaroundDisplayValues(
 }
 
 export function getBerthOnArrivalDisplayValues(
-  data: BaseKpiType | undefined | null,
+  data: any | undefined | null,
 ): BaseKpiDisplayValues {
   return {
     actual: isNotNullOrUndefined(data?.actual)
@@ -53,7 +51,7 @@ export function getBerthOnArrivalDisplayValues(
 }
 
 export function getCongestionImpactDisplayValues(
-  data: BaseKpiType | undefined | null,
+  data: any | undefined | null,
 ): BaseKpiDisplayValues {
   return {
     actual: isNotNullOrUndefined(data?.actual)
@@ -76,7 +74,7 @@ export function getCongestionImpactDisplayValues(
 }
 
 export function getPortEmissionDisplayValues(
-  data: BaseKpiType | undefined | null,
+  data: any | undefined | null,
 ): BaseKpiDisplayValues {
   return {
     comparison: isNotNullOrUndefined(data?.comparison)

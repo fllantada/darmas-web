@@ -2,7 +2,6 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { PortType } from "@/generated/graphql";
 import { AlertCircle, ArrowUpRightFromSquare } from "lucide-react";
 
 import {
@@ -12,11 +11,11 @@ import {
 } from "@/components/ui/collapsible";
 
 type TerminalListProps = {
-  port: PortType;
+  port: any;
 };
 
 export default function TerminalList({ port }: TerminalListProps) {
-  const terminals = useMemo(
+  /*  const terminals = useMemo(
     () =>
       port?.terminals?.sort((a, b) =>
         `${port.portCode}${a.terminalCode}`.localeCompare(
@@ -25,11 +24,13 @@ export default function TerminalList({ port }: TerminalListProps) {
       ),
     [port.portCode, port?.terminals],
   );
+ */
 
+  const terminals: any = [];
   return (
     <>
       {terminals && terminals.length > 0 ? (
-        terminals.map(terminal => (
+        terminals.map((terminal: any) => (
           <div className="bg-slate-100 p-2 mb-1" key={terminal.id}>
             <Collapsible>
               <CollapsibleTitle>
@@ -45,7 +46,7 @@ export default function TerminalList({ port }: TerminalListProps) {
               </CollapsibleTitle>
               <CollapsibleContent>
                 <div className="ml-3 my-1">
-                  {terminal.berths && terminal.berths.length > 0 ? (
+                  {/*     {terminal.berths && terminal.berths.length > 0 ? (
                     terminal.berths
                       .sort((a, b) =>
                         `${port.portCode}${a.berthName}`.localeCompare(
@@ -75,7 +76,7 @@ export default function TerminalList({ port }: TerminalListProps) {
                       <br />
                       There are no berths for this terminal.
                     </div>
-                  )}
+                  )} */}
                 </div>
               </CollapsibleContent>
             </Collapsible>

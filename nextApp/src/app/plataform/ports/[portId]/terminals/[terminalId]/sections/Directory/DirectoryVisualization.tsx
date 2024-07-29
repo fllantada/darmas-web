@@ -4,12 +4,10 @@ import { TooltipComponent } from "echarts/components";
 import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 
-import type { TreeChartData } from "./actions";
-
 echarts.use([TooltipComponent, TreeChart, CanvasRenderer]);
 
 type DirectoryVisualisationProps = {
-  data: TreeChartData;
+  data: any;
 };
 
 export default function DirectoryVisualisation({

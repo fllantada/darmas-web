@@ -4,7 +4,7 @@ interface IProps {
   portId: string;
 }
 
-export async function PortLineUpSC({ portId }: IProps) {
+export async function PortLineUpSC({}: IProps) {
   const data: any = {};
   if (!data) return null;
   return <PortLineUp vesselsArriving={data} />;

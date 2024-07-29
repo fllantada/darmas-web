@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { useKpiCardInteractions } from "@/app/plataform/customHooks/useKpiCardInteractions";
 import { LoadingState } from "@/app/plataform/lib/types";
@@ -8,7 +8,6 @@ import { LoadingState } from "@/app/plataform/lib/types";
 import { BerthOnArrivalKpiCard } from "./cards/BerthOnArrival";
 import { PortEmissionKpiCard } from "./cards/PortEmission";
 import { VesselTurnAroundKpiCard } from "./cards/VesselTurnAround";
-import BerthOnArrivalOverlay from "./charts/berthOnArrival/BerthOnArrival";
 import PortEmissionOverlay from "./charts/portEmission/PortEmissions";
 import VesselTurnaroundOverlay from "./charts/vesselTurnaround/VesselTurnaround";
 import { defaultTermnalHeaderKpis } from "./domain/defaultValues";
@@ -21,7 +20,7 @@ interface IProps {
 export function HeaderKpiSection({ terminalId }: IProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { selectedCard, clickOnCard } = useKpiCardInteractions(containerRef);
-  const [kpiData, setKpiData] = useState<TerminalHeaderKpis>(
+  const [kpiData /* setKpiData */] = useState<TerminalHeaderKpis>(
     defaultTermnalHeaderKpis,
   );
   /* 
@@ -72,9 +71,6 @@ export function HeaderKpiSection({ terminalId }: IProps) {
         <div className="w-full min-h-[500px] bg-white mt-3 p-3 rounded-md border-[1px] absolute shadow-lg z-10">
           {selectedCard == "Vessel Turnaround" && (
             <VesselTurnaroundOverlay terminalId={terminalId} />
-          )}
-          {selectedCard == "Berth on Arrival" && (
-            <BerthOnArrivalOverlay terminalId={terminalId} />
           )}
 
           {selectedCard == "Port Emission" && (

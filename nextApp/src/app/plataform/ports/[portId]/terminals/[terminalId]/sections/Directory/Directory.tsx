@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AlertCircle } from "lucide-react";
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -15,15 +15,13 @@ type DirectoryProps = {
   terminalId?: string;
 };
 
-export function TerminalDirectory({
-  className,
-  portId,
-  terminalId,
-}: DirectoryProps) {
+export function TerminalDirectory({ className }: DirectoryProps) {
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState<LoadingState>(LoadingState.LOADING);
-  const [error, setError] = useState<string>();
-  const [graphData, setGraphData] = useState<any>();
+  const [loading /* setLoading */] = useState<LoadingState>(
+    LoadingState.LOADING,
+  );
+  const [error /* setError */] = useState<string>();
+  const [graphData /* setGraphData */] = useState<any>();
 
   /*  useEffect(() => {
     if (open) {

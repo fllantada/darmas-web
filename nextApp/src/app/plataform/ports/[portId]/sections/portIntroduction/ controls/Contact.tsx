@@ -1,10 +1,9 @@
-import { Contact as ApiContact } from "@/generated/graphql";
 import { User } from "lucide-react";
 
 import { cn } from "@/app/plataform/lib/utils";
 
 interface ContactProps {
-  contact: ApiContact;
+  contact: any;
   className?: string;
 }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { NoData } from "@/components/KpisResultOverlays/NoData";
 import { LoadingContainer } from "@/components/LoadingContainer";
@@ -14,10 +14,10 @@ type BerthOnArrivalOverlayProps = {
   terminalId: string;
 };
 
-export default function VesselTurnaroundOverlay({
-  terminalId,
-}: BerthOnArrivalOverlayProps): JSX.Element {
-  const [loading, setLoading] = useState<LoadingState>(LoadingState.LOADING);
+export default function VesselTurnaroundOverlay({}: BerthOnArrivalOverlayProps): JSX.Element {
+  const [loading /* setLoading */] = useState<LoadingState>(
+    LoadingState.LOADING,
+  );
   const [chartData, setChartData] =
     useState<VesselTurnarrondTerminalOverlay[]>();
   const allChartData = useRef<VesselTurnarrondTerminalOverlay[]>();

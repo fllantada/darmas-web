@@ -8,7 +8,7 @@ type IProps = {
   terminalId: string;
 };
 
-export async function TerminalLineUpSC({ terminalId }: IProps) {
+export async function TerminalLineUpSC({}: IProps) {
   /*   const vesselArrivngTerminal = await getVesselArrivingTerminal(terminalId);
    */
   return (

@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { PortType } from "@/generated/graphql";
 import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -19,8 +18,8 @@ import {
 } from "@/components/ui/popover";
 
 type PortSearchProps = {
-  activePort: PortType;
-  ports: PortType[];
+  activePort: any;
+  ports: any[];
   className?: string;
   disabled?: boolean;
   onNavigateToPort?: (portId: string) => void;

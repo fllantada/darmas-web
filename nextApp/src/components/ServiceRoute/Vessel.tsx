@@ -1,5 +1,3 @@
-import { VesselType } from "@/generated/graphql";
-
 import {
   HoverCard,
   HoverCardContent,
@@ -11,7 +9,7 @@ import VesselTopViewIcon from "../icons/vesselTopView";
 
 type VesselProps = {
   position: "top" | "bottom";
-  vessel: VesselType;
+  vessel: any;
   className?: string;
 };
 

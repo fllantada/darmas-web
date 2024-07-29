@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { PortType } from "@/generated/graphql";
 import { CircleDashed } from "lucide-react";
 
 import { cn } from "@/app/plataform/lib/utils";
@@ -14,8 +13,8 @@ import "@/../node_modules/flag-icons/css/flag-icons.min.css";
 
 type HeadingProps = {
   className?: string;
-  activePort: PortType;
-  ports: PortType[];
+  activePort: any;
+  ports: any[];
   countryCode: string;
 };
 

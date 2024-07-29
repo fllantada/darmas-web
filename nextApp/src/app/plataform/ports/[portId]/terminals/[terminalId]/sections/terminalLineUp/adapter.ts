@@ -1,4 +1,3 @@
-import { TerminalType } from "@/generated/graphql";
 import { DateTime } from "luxon";
 
 import {
@@ -10,11 +9,11 @@ import { isNotNullOrUndefined } from "@/app/plataform/lib/utils";
 import { TVesselArrivingTerminal } from "./domain/interfaces";
 
 export function vesselArrivingTerminalAdapter(
-  serverVessels: TerminalType,
+  serverVessels: any,
 ): TVesselArrivingTerminal[] {
   const vesselsArriving: TVesselArrivingTerminal[] = [];
 
-  serverVessels.terminalLineup.forEach(serverVessel => {
+  serverVessels.terminalLineup.forEach((serverVessel: any) => {
     const vesselLoa = serverVessel.vesselLoa || 150;
     const spaceLetter = vesselLoa <= 150 ? 8 : 9;
     const uniqueId = `${serverVessel.vesselName}-${serverVessel.rotation}-${serverVessel.arrivalTime}`;

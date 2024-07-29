@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
+import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
 import LeftBar from "@/components/SideBar";
 
 import { Nav } from "./nav";
 import { HomeScripts } from "./scripts";
+import { WhatsappButton } from "./whatsappButton";
 
 import "./globals.css";
 
-/* import "./custom.css"; */
+import { getRandomFrase } from "./frases";
 
 export const metadata = {
   title: "Dar Mas - Ortodoncia Accesible y de Calidad",
@@ -17,17 +19,21 @@ export const metadata = {
   keywords:
     "ortodoncia, tratamientos de ortodoncia, especialistas en ortodoncia, brackets accesibles, atención dental de calidad",
   author: "Dar Mas",
-  viewport: "width=device-width, initial-scale=1",
-  // Puedes agregar más metadatos aquí según sea necesario
 };
 
+const monserrat = Montserrat({
+  display: "swap",
+  subsets: ["latin"],
+});
+
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const inspiration = getRandomFrase();
   return (
-    <html lang="es">
+    <html lang="es" className={monserrat.className}>
       <Head>
         <title>Dar+ Salud</title>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content={metadata.viewport} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
@@ -46,8 +52,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </Head>
       <HomeScripts />
 
-      <body>
-        <Nav />
+      <body className={"text-base font-normal"}>
+        <Nav frase={inspiration} />
+        <WhatsappButton />
         <div className="bg-secondary">{children}</div>
         <div className="h-[500px] bg-green-200 "></div>
         <div className="h-[500px] bg-secondary "></div>

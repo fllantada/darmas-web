@@ -1,26 +1,23 @@
-// src/components/Nav.tsx
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { WhatsappButton } from "./whatsappButton";
+interface IProps {
+  frase?: string;
+}
 
-export function Nav() {
+export function Nav({ frase }: IProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleToggle() {
     setIsOpen(!isOpen);
   }
 
-  function handleClickWhatsapp() {
-    window.open("https://wa.me/5491134400000", "_blank");
-  }
-
   return (
     <header
-      className={`bg-white relative  ${
+      className={`bg-white relative ${
         isOpen ? "border-b-0" : "border-b border-gray-200"
       }`}
     >
@@ -36,14 +33,18 @@ export function Nav() {
             />
           </div>
         </Link>
-
-        <WhatsappButton />
+        <div
+          className={`flex items-center justify-center ${isOpen ? "hidden" : ""} `}
+        >
+          <p className="font-['Roboto'] italic text-2xl text-gray-400">
+            {frase}
+          </p>
+        </div>
 
         <button
           className="navbar-toggler flex items-center lg:hidden"
           type="button"
           onClick={handleToggle}
-          aria-controls="navbarTogglerDemo02"
           aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
@@ -55,43 +56,33 @@ export function Nav() {
             className="w-6 h-6"
           />
         </button>
+
         <div
-          className={`lg:flex lg:items-center lg:space-x-6 absolute lg:static top-full left-0 w-full lg:w-auto bg-white lg:border-none  overflow-hidden ${
+          className={`lg:flex lg:items-center lg:space-x-6 lg:static lg:top-auto lg:left-auto lg:w-auto lg:bg-transparent lg:border-none lg:max-h-none ${
             isOpen
-              ? "max-h-96 flex justify-center items-center  transition-all duration-500 ease-in-out"
-              : "max-h-0"
+              ? "absolute top-full left-0 w-full bg-white max-h-96 flex flex-col transition-all duration-500 ease-in-out"
+              : "hidden"
           }`}
+          id="navbarTogglerDemo02"
         >
           <ul className="flex flex-col lg:flex-row lg:space-x-6">
             <li>
               <Link href="/">
-                <div className="text-gray-700 hover:text-blue-500">Home</div>
+                <div className="text-xl text-center  lg:text-2xl py-4 text-gray-700 hover:text-primary">
+                  Home
+                </div>
               </Link>
             </li>
             <li>
               <Link href="/ortodoncia">
-                <div className="text-gray-700 hover:text-blue-500">
+                <div className="text-xl text-center lg:text-2xl py-4 text-gray-700 hover:text-primary">
                   Ortodoncia
                 </div>
               </Link>
             </li>
             <li>
-              <Link href="/odontologia">
-                <div className="text-gray-700 hover:text-blue-500">
-                  Odontología
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/oftalmologia">
-                <div className="text-gray-700 hover:text-blue-500">
-                  Oftalmología
-                </div>
-              </Link>
-            </li>
-            <li>
               <Link href="/contacto">
-                <div className="text-gray-700 hover:text-blue-500">
+                <div className="text-xl text-center  lg:text-2xl py-4 text-gray-700 hover:text-primary">
                   Contacto
                 </div>
               </Link>

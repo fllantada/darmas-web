@@ -23,32 +23,14 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "rgb(56, 213, 174)",
+          foreground: "rgb(245, 245, 245)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "rgb(245, 245, 245)",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        tertiary: {
+          DEFAULT: "rgb(21, 186, 208)",
         },
         operatedVessel: "rgba(0, 193, 210, 1)",
         operatedVesselForecast: "rgba(0, 193, 210, 0.5)",
@@ -61,6 +43,15 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontSize: {
+        base: "16px", // Puedes usar 'text-base' para aplicar este tamaño de fuente
+        lg: "18px",
+        xl: "20px",
+      },
+      fontWeight: {
+        normal: "400", // Puedes usar 'font-normal' para aplicar este peso de fuente
+        bold: "700", // Puedes usar 'font-bold' para aplicar este peso de fuente
       },
       keyframes: {
         "accordion-down": {

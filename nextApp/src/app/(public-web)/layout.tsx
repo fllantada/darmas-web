@@ -50,10 +50,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </Head>
       <HomeScripts />
 
-      <body className={monserrat.className + " flex flex-col min-h-screen"}>
+      <body className={monserrat.className + " flex flex-col min-h-screen "}>
         <Nav frase={inspiration} />
         <WhatsappButton />
-        <main className="flex-grow mt-[100px]">{children}</main>
+        <main className="flex-grow mt-[100px] mx-16">{children}</main>
       </body>
     </html>
   );

@@ -2,15 +2,13 @@ import { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
-import LeftBar from "@/components/SideBar";
-
-import { Nav } from "./nav";
+import { Nav } from "../components/nav/NavBar";
+import { WhatsappButton } from "../components/WhatsappButton";
 import { HomeScripts } from "./scripts";
-import { WhatsappButton } from "./whatsappButton";
 
 import "./globals.css";
 
-import { getRandomFrase } from "./frases";
+import { getRandomFrase } from "../components/nav/frases";
 
 export const metadata = {
   title: "Dar Mas - Ortodoncia Accesible y de Calidad",

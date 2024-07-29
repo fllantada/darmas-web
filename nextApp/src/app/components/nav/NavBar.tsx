@@ -34,7 +34,7 @@ export function Nav({ frase }: IProps) {
           </div>
         </Link>
         <div
-          className={`flex items-center justify-center ${isOpen ? "hidden" : ""} `}
+          className={`flex items-center justify-center max-sm:hidden  ${isOpen ? "hidden" : ""} `}
         >
           <p className="font-['Roboto'] italic text-2xl text-gray-400">
             {frase}

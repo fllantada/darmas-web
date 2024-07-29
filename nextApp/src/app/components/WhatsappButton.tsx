@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export function WhatsappButton() {
   const handleClickWhatsapp = () => {
-    window.open("https://wa.me/5491134400000", "_blank");
+    window.open(
+      "https://wa.me/541158833835?text=Hola,%20¿como%20estas?%20vi%20la%20web%20y%20me%20gustaria%20hacerles%20una%20consulta.",
+      "_blank",
+    );
   };
 
   return (

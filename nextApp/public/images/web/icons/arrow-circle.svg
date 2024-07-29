@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.042" height="28.042" viewBox="0 0 28.042 28.042">
+  <g id="flecha_circulo" transform="translate(0 28.042) rotate(-90)">
+    <path id="Trazado_25322" data-name="Trazado 25322" d="M2,6H0V0H6V2H3.414l5.33,5.33L7.33,8.744,2,3.414Z" transform="translate(13.999 19.786) rotate(-135)" fill="#38d5ae"/>
+    <path id="Trazado_25323" data-name="Trazado 25323" d="M19.828,9.914a9.914,9.914,0,1,0-9.914,9.914A9.914,9.914,0,0,0,19.828,9.914Zm-1.8,0a8.112,8.112,0,1,0-8.112,8.112A8.112,8.112,0,0,0,18.026,9.914Z" transform="translate(14.021 28.042) rotate(-135)" fill="#38d5ae" fill-rule="evenodd"/>
+  </g>
+</svg>

@@ -3,8 +3,12 @@ import Head from "next/head";
 
 import LeftBar from "@/components/SideBar";
 
-import Nav from "./nav";
+import { Nav } from "./nav";
 import { HomeScripts } from "./scripts";
+
+import "./globals.css";
+
+/* import "./custom.css"; */
 
 export const metadata = {
   title: "Dar Mas - Ortodoncia Accesible y de Calidad",
@@ -30,7 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/images/og-image.jpg" />
-        <meta property="og:url" content="https://www.darplus.com" />
+        <meta property="og:url" content="www.darmas.com.ar" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
@@ -44,12 +48,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       <body>
         <Nav />
-        <LeftBar
-          className="min-h-screen fixed left-0 relative"
-          version={"1.0.0"}
-          commitId={process.env.COMMIT_ID?.slice(0, 7) || "dev"}
-        />
-        {children}
+        <div className="bg-secondary">{children}</div>
+        <div className="h-[500px] bg-green-200 "></div>
+        <div className="h-[500px] bg-secondary "></div>
+        <div className="h-[500px] bg-green-200 "></div>
+        <div className="h-[500px] bg-secondary "></div>
+        <div className="h-[500px] bg-green-200 "></div>
       </body>
     </html>
   );

@@ -8,7 +8,6 @@ import { LoadingState } from "@/app/plataform/lib/types";
 import { getNextError } from "@/app/plataform/lib/utils";
 
 import CustomChartLegend from "../../components/CustomChartLegend";
-import { getBerthOnArrivalOverlay } from "./actions";
 import BerthOnArrivalChart, {
   type BerthOnArrivalChartProps,
 } from "./BerthOnArrivalChart";
@@ -31,7 +30,7 @@ export default function BerthOnArrivalOverlay({
     "Others",
   ]);
 
-  async function refreshData(portId: string) {
+  /*   async function refreshData(portId: string) {
     try {
       setLoading(LoadingState.LOADING);
       const { data, target } = await getBerthOnArrivalOverlay(portId);
@@ -56,7 +55,7 @@ export default function BerthOnArrivalOverlay({
 
   useEffect(() => {
     refreshData(portId);
-  }, [portId]);
+  }, [portId]); */
 
   return (
     <LoadingContainer

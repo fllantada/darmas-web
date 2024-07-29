@@ -24,7 +24,7 @@ import {
   isNotNullOrUndefined,
   isNullOrUndefined,
 } from "@/app/plataform/lib/utils";
-import { mapStyles } from "@/app/theme";
+import { mapStyles } from "@/app/plataform/theme";
 
 import { getTerminalPolygon } from "../../utils/geometry";
 

@@ -1,5 +1,3 @@
-import type { BaseKpiType } from "@/generated/graphql";
-
 export enum LoadingState {
   LOADING = "LOADING",
   SUCCESS = "LOADED",
@@ -18,7 +16,4 @@ export type DateRange = {
   end: Date;
 };
 
-export type BaseKpiDisplayValues = Record<
-  keyof Omit<BaseKpiType, "__typename">,
-  string | undefined
->;
+export type BaseKpiDisplayValues = Record<string, string | undefined>;

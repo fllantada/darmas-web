@@ -1,4 +1,3 @@
-import { getPortActivities } from "./actions";
 import VesselActivities from "./VesselActivities";
 
 type IProps = {
@@ -10,6 +9,6 @@ export default async function VesselActivitiesSC({
   className,
   portId,
 }: IProps) {
-  const data = await getPortActivities(portId);
+  const data = {} as any;
   return <VesselActivities portActivities={data} className={className} />;
 }

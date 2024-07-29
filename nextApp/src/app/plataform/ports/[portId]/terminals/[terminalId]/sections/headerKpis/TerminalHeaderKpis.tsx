@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { useKpiCardInteractions } from "@/app/plataform/customHooks/useKpiCardInteractions";
 import { LoadingState } from "@/app/plataform/lib/types";
 
-import { getTerminalHeaderKpis } from "./actions";
 import { BerthOnArrivalKpiCard } from "./cards/BerthOnArrival";
 import { PortEmissionKpiCard } from "./cards/PortEmission";
 import { VesselTurnAroundKpiCard } from "./cards/VesselTurnAround";
@@ -25,13 +24,13 @@ export function HeaderKpiSection({ terminalId }: IProps) {
   const [kpiData, setKpiData] = useState<TerminalHeaderKpis>(
     defaultTermnalHeaderKpis,
   );
-
+  /* 
   useEffect(() => {
     getTerminalHeaderKpis(terminalId ?? "fakeTerminalId").then(data => {
       data && setKpiData(data);
     });
   }, [terminalId]);
-
+ */
   const handleClickOnCard = (origin: string) => {
     clickOnCard(origin);
   };

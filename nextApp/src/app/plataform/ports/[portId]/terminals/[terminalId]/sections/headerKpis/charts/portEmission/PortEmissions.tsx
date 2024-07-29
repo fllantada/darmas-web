@@ -7,7 +7,6 @@ import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 import { getNextError } from "@/app/plataform/lib/utils";
 
-import { getPortEmissionOverlay } from "../actions";
 import { PortEmissionTerminalOverlay } from "../interfaces";
 import PortEmissionsChart from "./PortEmissionsChart";
 
@@ -25,10 +24,10 @@ export default function PortEmissionOverlay({
   async function refreshData(terminalId: string) {
     try {
       setLoading(LoadingState.LOADING);
-      const data = await getPortEmissionOverlay(terminalId);
+      /*   const data = await getPortEmissionOverlay(terminalId);
       if (data) {
         setChartData(data);
-      }
+      } */
       setLoading(LoadingState.SUCCESS);
     } catch (e) {
       setError(getNextError(e));

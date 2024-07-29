@@ -7,8 +7,6 @@ import LeftBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar/TopBar";
 import { cn } from "@/app/plataform/lib/utils";
 
-import "./globals.css";
-
 import packageJson from "../../../package.json";
 
 const roboto = Roboto({

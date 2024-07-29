@@ -7,7 +7,7 @@ import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 import { getNextError } from "@/app/plataform/lib/utils";
 
-import { getPortEmissionOverlay } from "./actions";
+/* import { getPortEmissionOverlay } from "./actions"; */
 import PortEmissionsChart, {
   type PortEmissionsChartProps,
 } from "./PortEmissionsChart";
@@ -26,7 +26,7 @@ export default function PortEmissionOverlay({
   async function refreshData(portId: string) {
     try {
       setLoading(LoadingState.LOADING);
-      const data = await getPortEmissionOverlay(portId);
+      const data: any[] = [];
       if (data) {
         setChartData({
           vessels: data.map(d => ({

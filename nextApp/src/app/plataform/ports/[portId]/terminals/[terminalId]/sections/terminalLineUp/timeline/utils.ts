@@ -2,7 +2,7 @@ import moment from "moment";
 import { TimelineGroup, TimelineItem } from "vis-timeline/types";
 
 import { RotationType } from "@/app/plataform/globalDomain/rotationTypes";
-import { VesselColors } from "@/app/theme";
+import { VesselColors } from "@/app/plataform/theme";
 
 import { TVesselArrivingTerminal } from "../domain/interfaces";
 

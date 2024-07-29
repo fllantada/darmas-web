@@ -5,9 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { NoData } from "@/components/KpisResultOverlays/NoData";
 import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
-import { getNextError } from "@/app/plataform/lib/utils";
 
-import { getBerthOnArrivalOverlay } from "../actions";
 import { ChartLegends } from "../ChartLegends";
 import { BerthOnArrivalTerminalOverlay } from "../interfaces";
 import BerthOnArrivalChart from "./BerthOnArrivalChart";
@@ -32,7 +30,7 @@ export default function BerthOnArrivalOverlay({
 
   useEffect(() => {
     setLoading(LoadingState.LOADING);
-    getBerthOnArrivalOverlay(terminalId)
+    /* getBerthOnArrivalOverlay(terminalId)
       .then(data => {
         if (data) {
           allChartData.current = data;
@@ -47,7 +45,7 @@ export default function BerthOnArrivalOverlay({
       .catch(e => {
         setError(getNextError(e));
         setLoading(LoadingState.FAILED);
-      });
+      }); */
   }, [terminalId]);
   const handleFiltersChange = (value: string[]) => {
     if (!chartData) return;

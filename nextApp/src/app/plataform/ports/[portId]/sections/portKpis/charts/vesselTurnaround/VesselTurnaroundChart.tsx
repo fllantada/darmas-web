@@ -14,7 +14,7 @@ import { CanvasRenderer } from "echarts/renderers";
 
 import EChartBaseReact from "@/components/EChartBaseReact";
 import { CalculationType } from "@/app/plataform/globalDomain/calculationTypes";
-import { VesselColors } from "@/app/theme";
+import { VesselColors } from "@/app/plataform/theme";
 
 echarts.use([
   GridComponent,

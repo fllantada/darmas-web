@@ -1,8 +1,5 @@
-import { BaseKpiType } from "@/generated/graphql";
-
 import { BaseKpiDisplayValues } from "@/app/plataform/lib/types";
 
-import { getPortHeaderKpis } from "../../actions";
 import PortHeaderKpis from "./PortHeaderKpis";
 import {
   getBerthOnArrivalDisplayValues,
@@ -13,7 +10,7 @@ import {
 
 export type DisplayKpiDataItem = {
   display: BaseKpiDisplayValues;
-  data: BaseKpiType | undefined | null;
+  data: any | undefined | null;
 };
 
 type PortHeaderKpisProps = {
@@ -23,7 +20,7 @@ type PortHeaderKpisProps = {
 export default async function PortHeaderKpisSC({
   portId,
 }: PortHeaderKpisProps) {
-  const data = await getPortHeaderKpis(portId);
+  const data: any = {};
   let kpiData;
   if (data) {
     kpiData = {

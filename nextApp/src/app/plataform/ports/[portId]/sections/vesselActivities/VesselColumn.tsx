@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
 import VesselFilledIcon from "@/components/icons/vesselFilled";
-import { VesselColors } from "@/app/theme";
+import { VesselColors } from "@/app/plataform/theme";
 
 import { VesselInformation, VesselType } from "./interfaces";
 

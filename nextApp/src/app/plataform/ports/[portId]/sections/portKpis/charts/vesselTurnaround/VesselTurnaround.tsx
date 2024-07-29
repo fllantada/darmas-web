@@ -8,7 +8,6 @@ import { LoadingState } from "@/app/plataform/lib/types";
 import { getNextError } from "@/app/plataform/lib/utils";
 
 import CustomChartLegend from "../../components/CustomChartLegend";
-import { getVesselTurnaroundOverlay } from "./actions";
 import VesselTurnaroundChart, {
   type VesselTurnaroundChartProps,
 } from "./VesselTurnaroundChart";
@@ -34,7 +33,7 @@ export default function VesselTurnaroundOverlay({
   async function refreshData(portId: string) {
     try {
       setLoading(LoadingState.LOADING);
-      const data = await getVesselTurnaroundOverlay(portId);
+      const data: any[] = [];
       if (data) {
         setChartData({
           vessels: data.map(d => ({

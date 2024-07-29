@@ -7,7 +7,7 @@ import { featureCollection, point } from "@turf/helpers";
 import type { ViewStateChangeEvent } from "react-map-gl";
 
 import { LoadingState } from "@/app/plataform/lib/types";
-import { mapStyles } from "@/app/theme";
+import { mapStyles } from "@/app/plataform/theme";
 
 import { LoadingContainer } from "../LoadingContainer";
 import type { VeseelForMap } from "./Vessel";

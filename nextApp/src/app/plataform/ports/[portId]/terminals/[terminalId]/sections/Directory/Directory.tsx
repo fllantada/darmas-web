@@ -7,8 +7,6 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 
-import { getDirectoryTree } from "./actions";
-import type { TreeChartData } from "./actions";
 import DirectoryVisualisation from "./DirectoryVisualization";
 
 type DirectoryProps = {
@@ -25,9 +23,9 @@ export function TerminalDirectory({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState<LoadingState>(LoadingState.LOADING);
   const [error, setError] = useState<string>();
-  const [graphData, setGraphData] = useState<TreeChartData>();
+  const [graphData, setGraphData] = useState<any>();
 
-  useEffect(() => {
+  /*  useEffect(() => {
     if (open) {
       setLoading(LoadingState.LOADING);
       getDirectoryTree(portId, terminalId)
@@ -39,7 +37,7 @@ export function TerminalDirectory({
           setLoading(LoadingState.FAILED), setError(e.message);
         });
     }
-  }, [portId, terminalId, open]);
+  }, [portId, terminalId, open]); */
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

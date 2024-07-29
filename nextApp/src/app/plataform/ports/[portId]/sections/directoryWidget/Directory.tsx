@@ -7,7 +7,6 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 
-import { getDirectoryTree } from "./actions";
 import DirectoryVisualisation from "./DirectoryVisualization";
 import { TDirectoryTree } from "./interfaces";
 
@@ -30,14 +29,14 @@ export default function Directory({
   useEffect(() => {
     if (open) {
       setLoading(LoadingState.LOADING);
-      getDirectoryTree(countryCode, portCode)
+      /*       getDirectoryTree(countryCode, portCode)
         .then(data => {
           setGraphData(data);
           setLoading(LoadingState.SUCCESS);
         })
         .catch(e => {
           setLoading(LoadingState.FAILED), setError(e.message);
-        });
+        }); */
     }
   }, [open, countryCode, portCode]);
 

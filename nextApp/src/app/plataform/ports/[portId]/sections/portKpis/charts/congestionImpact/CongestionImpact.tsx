@@ -7,7 +7,6 @@ import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 import { getNextError } from "@/app/plataform/lib/utils";
 
-import { getCongestionImpactOverlay } from "./actions";
 import { CongestionImpactChart } from "./Chart";
 import { CongestionImpact } from "./interfaces";
 import { Legends } from "./Legends";
@@ -23,7 +22,7 @@ export default function CongestionImpactOverlay({
   const [error, setError] = useState<string>();
   const [chartData, setChartData] = useState<CongestionImpact>();
 
-  async function refreshData(portId: string) {
+  /*   async function refreshData(portId: string) {
     try {
       setLoading(LoadingState.LOADING);
       const data = await getCongestionImpactOverlay(portId);
@@ -40,7 +39,7 @@ export default function CongestionImpactOverlay({
 
   useEffect(() => {
     refreshData(portId);
-  }, [portId]);
+  }, [portId]); */
 
   return (
     <LoadingContainer

@@ -2,8 +2,6 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import { notFound } from "next/navigation";
-import { Query, QueryPortByIdArgs } from "@/generated/graphql";
-import { gql } from "@apollo/client";
 
 import {
   Collapsible,
@@ -12,13 +10,11 @@ import {
 } from "@/components/ui/collapsible";
 import { Toaster } from "@/components/ui/sonner";
 import { CrumbSetter } from "@/app/plataform/contexts/BreadcrumbContext";
-import { getClient } from "@/app/plataform/lib/apiClient";
 
-import { getPageEssentials } from "./actions";
 import Heading from "./components/Heading";
 import TerminalList from "./components/TerminalList";
-import { EventLogSC } from "./sections/eventLog/EventLogSC";
-import { EventLogSkeleton } from "./sections/eventLog/EventLogSkeleton";
+/* import { EventLogSC } from "./sections/eventLog/EventLogSC";
+import { EventLogSkeleton } from "./sections/eventLog/EventLogSkeleton"; */
 import PortIntroduction from "./sections/portIntroduction/PortIntroduction";
 import PortHeaderKpisSC from "./sections/portKpis/PortHeaderKpisSC";
 import { PortHeaderKpisSkeleton } from "./sections/portKpis/skeletons/PortHeaderKpisSkeleton";
@@ -37,45 +33,21 @@ interface PortPageProps {
 export async function generateMetadata({
   params: { portId },
 }: PortPageProps): Promise<Metadata> {
-  const gqlClient = getClient();
-
-  const { error, data } = await gqlClient.query<Query, QueryPortByIdArgs>({
-    query: gql`
-      query Port($portId: String!) {
-        portById(portId: $portId) {
-          portName
-          portCode
-        }
-      }
-    `,
-    variables: {
-      portId,
-    },
-  });
-
-  if (!error && data.portById) {
-    return {
-      title: `[${data.portById.portCode}] ${data.portById.portName} | Ports`,
-    };
-  }
-
   return {};
 }
 
 export const dynamic = "force-dynamic";
 
 export default async function PortPage({ params: { portId } }: PortPageProps) {
-  const { ports, activePort, countryCode } = (await getPageEssentials(
-    portId,
-  )) ?? {
+  const { ports, activePort, countryCode } = {
     ports: [],
-    activePort: null,
-    country: null,
+    activePort: {
+      portCode: "test",
+      portName: "test",
+      id: "test",
+    },
+    countryCode: "test",
   };
-
-  if (!activePort) {
-    throw notFound();
-  }
 
   return (
     <>
@@ -117,9 +89,9 @@ export default async function PortPage({ params: { portId } }: PortPageProps) {
             </Collapsible>
           </div>
           <div className="mt-4 p-3 border-b-[1px] border-[#DBDCDF]">
-            <Suspense fallback={<EventLogSkeleton />}>
+            {/*     <Suspense fallback={<EventLogSkeleton />}>
               <EventLogSC portId={portId} port={activePort} />
-            </Suspense>
+            </Suspense> */}
           </div>
         </div>
         <div className="flex-auto">

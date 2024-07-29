@@ -1,6 +1,7 @@
 "use server";
 
-import { getVesselArrivingTerminal } from "./actions";
+/* import { getVesselArrivingTerminal } from "./actions";
+ */
 import { TerminalLineUp } from "./TerminalLineUp";
 
 type IProps = {
@@ -8,11 +9,11 @@ type IProps = {
 };
 
 export async function TerminalLineUpSC({ terminalId }: IProps) {
-  const vesselArrivngTerminal = await getVesselArrivingTerminal(terminalId);
-
+  /*   const vesselArrivngTerminal = await getVesselArrivingTerminal(terminalId);
+   */
   return (
     <>
-      <TerminalLineUp allVesselsArriving={vesselArrivngTerminal} />
+      <TerminalLineUp allVesselsArriving={[]} />
     </>
   );
 }

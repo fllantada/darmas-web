@@ -8,7 +8,6 @@ import {
   CollapsibleTitle,
 } from "@/components/ui/collapsible";
 
-import { getTerminalFacilities } from "./actions";
 import { NavigationalInformation } from "./components/navegationalInformation/NavigationalInformation";
 import { Pilotage } from "./components/pilotage/Pilotage";
 import { Tugs } from "./components/tugs/Tugs";
@@ -21,11 +20,11 @@ interface IProps {
 }
 
 export function TerminalFacilities({ terminalId }: IProps) {
-  useEffect(() => {
+  /*   useEffect(() => {
     getTerminalFacilities(terminalId).then(faclities =>
       useTerminalFacilities.getState().initializeTerminalFacilities(faclities),
     );
-  }, [terminalId]);
+  }, [terminalId]); */
 
   return (
     <div className="mt-4 p-3 border-b-[1px] border-[#DBDCDF]">

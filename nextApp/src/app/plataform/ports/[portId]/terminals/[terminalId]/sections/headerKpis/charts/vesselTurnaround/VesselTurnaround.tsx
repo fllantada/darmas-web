@@ -6,7 +6,6 @@ import { NoData } from "@/components/KpisResultOverlays/NoData";
 import { LoadingContainer } from "@/components/LoadingContainer";
 import { LoadingState } from "@/app/plataform/lib/types";
 
-import { getVesselTurnaroundOverlay } from "../actions";
 import { ChartLegends } from "../ChartLegends";
 import { VesselTurnarrondTerminalOverlay } from "../interfaces";
 import VesselTurnaroundChart from "./VesselTurnaroundChart";
@@ -29,7 +28,7 @@ export default function VesselTurnaroundOverlay({
     "others",
   ]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     getVesselTurnaroundOverlay(terminalId)
       .then(data => {
         if (data) setChartData(data);
@@ -39,7 +38,7 @@ export default function VesselTurnaroundOverlay({
       .catch(() => {
         setLoading(LoadingState.FAILED);
       });
-  }, [terminalId]);
+  }, [terminalId]); */
 
   const handleFiltersChange = (value: string[]) => {
     if (!chartData) return;

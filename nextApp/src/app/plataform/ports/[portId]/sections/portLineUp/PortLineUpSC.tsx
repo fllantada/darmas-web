@@ -1,4 +1,3 @@
-import { getVesselArrivingPort } from "./actions";
 import { PortLineUp } from "./PortLineUp";
 
 interface IProps {
@@ -6,8 +5,7 @@ interface IProps {
 }
 
 export async function PortLineUpSC({ portId }: IProps) {
-  const data = await getVesselArrivingPort(portId);
-
+  const data: any = {};
   if (!data) return null;
   return <PortLineUp vesselsArriving={data} />;
 }

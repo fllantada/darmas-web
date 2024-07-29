@@ -2,8 +2,6 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import { notFound } from "next/navigation";
-import { Query } from "@/generated/graphql";
-import { gql } from "@apollo/client";
 
 import {
   Collapsible,
@@ -11,10 +9,9 @@ import {
   CollapsibleTitle,
 } from "@/components/ui/collapsible";
 import { CrumbSetter } from "@/app/plataform/contexts/BreadcrumbContext";
-import { getClient } from "@/app/plataform/lib/apiClient";
 
-import { EventLogSC } from "../../sections/eventLog/EventLogSC";
-import { EventLogSkeleton } from "../../sections/eventLog/EventLogSkeleton";
+/* import { EventLogSC } from "../../sections/eventLog/EventLogSC";
+import { EventLogSkeleton } from "../../sections/eventLog/EventLogSkeleton"; */
 import BerthList from "./components/BerthList";
 import Heading from "./components/Heading";
 import { TerminalFacilities } from "./sections/facilities/TerminalFacilities";
@@ -34,106 +31,18 @@ interface TerminalPageProps {
 export async function generateMetadata({
   params: { terminalId, portId },
 }: TerminalPageProps): Promise<Metadata> {
-  const gqlClient = getClient();
-
-  const { error, data } = await gqlClient.query<Query>({
-    query: gql`
-      query ($terminalId: String!, $portId: String!) {
-        terminalById(terminalId: $terminalId) {
-          terminalName
-        }
-
-        portById(portId: $portId) {
-          portName
-        }
-      }
-    `,
-    variables: {
-      terminalId,
-      portId,
-    },
-  });
-
-  if (!error && data.terminalById && data.portById) {
-    return {
-      title: `Terminal ${data.terminalById.terminalName} at ${data.portById.portName} | Ports`,
-    };
-  }
-
   return {};
 }
 
 export default async function TerminalPage({
   params: { terminalId, portId },
 }: TerminalPageProps) {
-  const gqlClient = getClient();
-
-  const { portInfo, terminal } = await gqlClient
-    .query<Query>({
-      query: gql`
-        query ($portId: String!, $terminalId: String!) {
-          portById(portId: $portId) {
-            id
-            portName
-            portCode
-            countryCode
-            timezone
-            terminals {
-              id
-              terminalName
-              terminalCode
-            }
-          }
-          terminalById(terminalId: $terminalId) {
-            id
-            terminalName
-            terminalCode
-            center
-            berths {
-              length
-              lengthUnit
-              depth
-              depthUnit
-              berthLocation
-              berthName
-            }
-          }
-        }
-      `,
-      variables: {
-        terminalId,
-        portId,
-      },
-    })
-    .then(res => ({
-      portInfo: res.data.portById,
-      terminal: res.data.terminalById,
-    }));
-
-  if (!portInfo || !terminal) {
-    throw notFound();
-  }
+  const terminal = {} as any;
+  const portInfo = {} as any;
 
   /* const terminalData = await genTerminalData(); // Mock data to be removed */
   return (
     <>
-      <CrumbSetter
-        crumbs={[
-          {
-            name: "Ports",
-            path: "/ports",
-          },
-          {
-            name: `[${portInfo.portCode}] ${portInfo.portName}`,
-            path: `/ports/${portId}`,
-          },
-          {
-            name: `[${terminal.terminalCode}] ${terminal.terminalName}`,
-            path: `/ports/${portId}/terminals/${terminal.id}`,
-          },
-        ]}
-      />
-
       <div className="flex">
         <div className="flex-none w-[415px] bg-white border-2 rounded-md border-[#DBDCDF] mr-4">
           <Heading
@@ -152,12 +61,12 @@ export default async function TerminalPage({
             </Collapsible>
           </div>
           <div className="mt-4 p-3 border-b-[1px] border-[#DBDCDF]">
-            <Suspense fallback={<EventLogSkeleton />}>
+            {/*   <Suspense fallback={<EventLogSkeleton />}>
               <EventLogSC
                 portId={portInfo.id}
                 terminalCode={terminal.terminalCode}
               />
-            </Suspense>
+            </Suspense> */}
           </div>
           <TerminalFacilities terminalId={terminalId} />
         </div>

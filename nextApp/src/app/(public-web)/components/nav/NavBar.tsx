@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { cn } from "@/app/plataform/lib/utils";
+
 interface IProps {
   frase?: string;
 }
@@ -17,9 +19,11 @@ export function Nav({ frase }: IProps) {
 
   return (
     <header
-      className={`bg-white relative ${
-        isOpen ? "border-b-0" : "border-b border-gray-200"
-      }`}
+      className={cn(
+        `fixed shadow-xl w-full bg-white h-[100px]  ${
+          isOpen ? "border-b-0" : "border-b border-gray-200"
+        }`,
+      )}
     >
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link href="/">

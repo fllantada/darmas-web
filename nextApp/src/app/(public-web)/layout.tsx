@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
-import { Nav } from "../components/nav/NavBar";
-import { WhatsappButton } from "../components/WhatsappButton";
+import { Nav } from "./components/nav/NavBar";
+import { WhatsappButton } from "./components/WhatsappButton";
 import { HomeScripts } from "./scripts";
 
 import "./globals.css";
 
-import { getRandomFrase } from "../components/nav/frases";
+import { getRandomFrase } from "./components/nav/frases";
 
 export const metadata = {
   title: "Dar Mas - Ortodoncia Accesible y de Calidad",
@@ -27,7 +27,7 @@ const monserrat = Montserrat({
 export default function RootLayout({ children }: { children: ReactNode }) {
   const inspiration = getRandomFrase();
   return (
-    <html lang="es" className={monserrat.className}>
+    <html lang="es">
       <Head>
         <title>Dar+ Salud</title>
         <meta charSet="UTF-8" />
@@ -50,15 +50,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </Head>
       <HomeScripts />
 
-      <body className={"text-base font-normal"}>
+      <body className={monserrat.className + " flex flex-col min-h-screen"}>
         <Nav frase={inspiration} />
         <WhatsappButton />
-        <div className="bg-secondary">{children}</div>
-        <div className="h-[500px] bg-green-200 "></div>
-        <div className="h-[500px] bg-secondary "></div>
-        <div className="h-[500px] bg-green-200 "></div>
-        <div className="h-[500px] bg-secondary "></div>
-        <div className="h-[500px] bg-green-200 "></div>
+        <main className="flex-grow mt-[100px]">{children}</main>
       </body>
     </html>
   );

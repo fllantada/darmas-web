@@ -2,6 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-base font-normal; /* Asegúrate de que esto esté aplicado en el archivo CSS global */
-}
+/* Elimina esta parte */

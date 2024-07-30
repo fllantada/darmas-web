@@ -11,7 +11,7 @@ export function MobileNav({ isOpen, handler }: IProps) {
   }
   return (
     <div className="absolute top-full left-0 w-full bg-white  flex flex-col z-10 ">
-      <ul className="flex flex-col items-center justify-center space-y-4 w-full z-50 bg-pink-300">
+      <ul className="flex flex-col items-center justify-center space-y-4 w-full z-50">
         <li>
           <Link href="/" onClick={handler}>
             <div className="text-xl py-4 text-gray-700 hover:text-primary">

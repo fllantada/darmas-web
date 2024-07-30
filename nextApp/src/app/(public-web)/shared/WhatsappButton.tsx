@@ -11,7 +11,7 @@ export function WhatsappButton() {
   };
 
   return (
-    <div className="fixed bottom-16 right-4 lg:bottom-8 lg:right-8 flex items-center">
+    <div className="fixed bottom-16 right-4 lg:bottom-8 lg:right-8 flex items-center z-50">
       {/* Visibilidad en pantallas pequeñas */}
       <button
         className=" m:hidden flex items-center bg-green-500 text-white rounded-full hover:bg-green-600 shadow-lg transition-transform transform hover:scale-105 lg:hidden px-4 py-2"

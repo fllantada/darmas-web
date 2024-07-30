@@ -5,5 +5,9 @@ export const metadata: Metadata = {
 };
 
 export default function Ortodoncia() {
-  return <>Ortodoncia </>;
+  return (
+    <>
+      <div>Ortodoncia </div>
+    </>
+  );
 }

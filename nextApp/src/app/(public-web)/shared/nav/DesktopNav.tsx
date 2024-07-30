@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export function DesktopNav() {
+interface IProps {
+  handler: () => void;
+}
+
+export function DesktopNav({ handler }: IProps) {
   return (
     <div className="hidden lg:flex ">
       <ul className="flex flex-row space-x-6">

@@ -12,16 +12,17 @@ import { LogoLink } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { NicePhrase } from "./Phrase";
 
-interface IProps {
-  frase?: string;
-}
+interface IProps {}
 
-export function Nav({ frase }: IProps) {
+export function Nav({}: IProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleToggle() {
     console.log("CLICK ");
     setIsOpen(!isOpen);
+  }
+  function handlerClick() {
+    setIsOpen(false);
   }
 
   return (
@@ -33,8 +34,8 @@ export function Nav({ frase }: IProps) {
       <LogoLink />
       {!isOpen && <NicePhrase />}
       <HamburgIcon handler={handleToggle} openStatus={isOpen} />
-      <DesktopNav />
-      <MobileNav isOpen={isOpen} />
+      <DesktopNav handler={handlerClick} />
+      <MobileNav handler={handlerClick} isOpen={isOpen} />
     </nav>
   );
 }

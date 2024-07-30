@@ -1,8 +1,7 @@
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Ortodoncia",
 };
 
 export default function Ortodoncia() {

@@ -8,8 +8,6 @@ import { HomeScripts } from "./scripts";
 
 import "./globals.css";
 
-import { getRandomFrase } from "./components/nav/frases";
-
 export const metadata = {
   title: "Dar Mas - Ortodoncia Accesible y de Calidad",
   description:
@@ -25,7 +23,6 @@ const monserrat = Montserrat({
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const inspiration = getRandomFrase();
   return (
     <html lang="es">
       <Head>
@@ -35,25 +32,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content="/images/og-image.jpg" />
-        <meta property="og:url" content="www.darmas.com.ar" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/images/twitter-image.jpg" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/styles/global.css" />
+
         <title>{metadata.title}</title>
       </Head>
       <HomeScripts />
 
-      <body className={monserrat.className + " flex flex-col min-h-screen "}>
-        <Nav frase={inspiration} />
+      <body className={monserrat.className + " flex flex-col min-h-screen z-0"}>
+        <Nav />
         <WhatsappButton />
-        <main className="flex-grow mt-[100px] mx-16">{children}</main>
+        <main className="mt-[100px] ">{children}</main>
       </body>
     </html>
   );

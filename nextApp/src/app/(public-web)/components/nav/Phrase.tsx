@@ -1,3 +1,27 @@
+import { useEffect, useState } from "react";
+
+export function NicePhrase() {
+  const [randomIndex, setRandomIndex] = useState(0);
+
+  useEffect(() => {
+    // Genera el índice aleatorio solo en el cliente
+    const index = Math.floor(Math.random() * frases.length);
+    setRandomIndex(index);
+  }, []); // El array vacío asegura que el efecto solo se ejecute una vez
+
+  if (randomIndex === null) {
+    return <div className="text-center">Cargando...</div>;
+  }
+
+  return (
+    <div className={`flex items-center justify-center max-sm:hidden   `}>
+      <p className="font-['Roboto'] italic text-2xl text-gray-400">
+        {frases[randomIndex]}
+      </p>
+    </div>
+  );
+}
+
 const frases = [
   "Cuida tu cuerpo, es el único.",
   "Salud es riqueza, cuídala.",
@@ -53,7 +77,3 @@ const frases = [
   "Valora cada pequeño logro.",
   "Salud es equilibrio diario.",
 ];
-
-export const getRandomFrase = () => {
-  return frases[Math.floor(Math.random() * frases.length)];
-};

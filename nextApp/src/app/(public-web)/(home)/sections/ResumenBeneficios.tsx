@@ -2,7 +2,7 @@ import React from "react";
 
 export function ResumenBeneficios() {
   return (
-    <section className="container mx-auto py-16 text-center bg-primary-foreground">
+    <section className="container mx-auto py-12 text-center bg-primary-foreground">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="flex flex-col items-center">
           <img
@@ -11,11 +11,10 @@ export function ResumenBeneficios() {
             className="pb-5"
           />
           <div className="text-xl font-semibold text-teal-500">
-            Sin ahorros previos
+            Sin costo inicial
           </div>
           <p className="text-gray-700">
-            El paciente soló paga por su hora consultorio, No se paga por
-            prestaciones ni tratamientos a realizar.
+            Pagas por turno, no hay costos ocultos ni pagos iniciales altos.
           </p>
         </div>
         <div className="flex flex-col items-center">
@@ -37,11 +36,11 @@ export function ResumenBeneficios() {
             className="pb-5"
           />
           <div className="text-xl font-semibold text-teal-500">
-            Profesionales de calidad
+            Especialistas en Ortodoncia
           </div>
           <p className="text-gray-700">
-            Trabajamos con especialistas calificados eliminando la burocracia
-            que exige actualmente en el sistema de salud.
+            Todo el equipo que forma parte de nuestra red son especialistas en
+            ortodoncia y están comprometidos con la calidad de su trabajo.
           </p>
         </div>
       </div>

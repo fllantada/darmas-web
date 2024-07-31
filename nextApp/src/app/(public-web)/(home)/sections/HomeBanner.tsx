@@ -12,9 +12,6 @@ export function HomeBanner() {
           Más de 10.000 sonrisas felices
         </p>
         <p className="text-xl md:text-3xl mb-2">
-          20 profesionales especialistas
-        </p>
-        <p className="text-xl md:text-3xl mb-2">
           En Buenos Aires y el interior del país
         </p>
       </div>

@@ -7,4 +7,17 @@ module.exports = {
     return config;
   },
   output: "standalone",
+  async rewrites() {
+    return [
+      {
+        source: "/plataforma/:path*",
+        destination: "/plataforma/:path*",
+      },
+      {
+        source: "/:path*",
+
+        destination: "/",
+      },
+    ];
+  },
 };

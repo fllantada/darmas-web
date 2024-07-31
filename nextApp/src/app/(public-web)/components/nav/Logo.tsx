@@ -5,7 +5,7 @@ export function LogoLink() {
   return (
     <Link href="/">
       <Image
-        src="/images/web/home/darmassalud.svg"
+        src="/web/images/darmasLogo.svg"
         alt="Logotipo Dar+ Salud"
         width={150}
         height={40}

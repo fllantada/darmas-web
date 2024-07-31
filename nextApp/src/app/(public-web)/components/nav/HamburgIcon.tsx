@@ -15,7 +15,7 @@ export function HamburgIcon({ handler, openStatus }: IProps) {
       aria-label="Toggle navigation"
     >
       <Image
-        src="/images/web/general/menu.svg"
+        src="/web/images/menu.svg"
         alt="Menu icon"
         width={24}
         height={24}

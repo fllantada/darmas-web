@@ -12,13 +12,12 @@ export function WhatsappButton() {
 
   return (
     <div className="fixed bottom-16 right-4 lg:bottom-8 lg:right-8 flex items-center z-50">
-      {/* Visibilidad en pantallas pequeñas */}
       <button
         className=" m:hidden flex items-center bg-green-500 text-white rounded-full hover:bg-green-600 shadow-lg transition-transform transform hover:scale-105 lg:hidden px-4 py-2"
         onClick={handleClickWhatsapp}
       >
         <Image
-          src="/images/web/home/whatsapp-white.svg"
+          src="/web/icons/whatsapp-white.svg"
           alt="WhatsApp icon"
           width={35}
           height={35}
@@ -27,13 +26,12 @@ export function WhatsappButton() {
         <span>Hablemos</span>
       </button>
 
-      {/* Visibilidad en pantallas medianas y grandes */}
       <button
         className="hidden lg:flex items-center bg-green-500 text-white rounded-full hover:bg-green-600 shadow-lg transition-transform transform hover:scale-105 px-4 py-2"
         onClick={handleClickWhatsapp}
       >
         <Image
-          src="/images/web/home/whatsapp-white.svg"
+          src="/web/icons/whatsapp-white.svg"
           alt="WhatsApp icon"
           width={25}
           height={25}

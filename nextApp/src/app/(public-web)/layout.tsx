@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
+import { Nav } from "./components/nav/NavBar";
+import { WhatsappButton } from "./components/WhatsappButton";
 import { HomeScripts } from "./scripts";
-import { Nav } from "./shared/nav/NavBar";
-import { WhatsappButton } from "./shared/WhatsappButton";
 
 import "./globals.css";
 

@@ -48,21 +48,13 @@ export function SinDemoras() {
           </div>
         </div>
         <div className="flex items-start space-x-3 p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-md">
-          <svg
-            className="w-6 h-6 text-yellow-500 flex-shrink-0"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+          <Image
+            src="/web/icons/warning-alert-icon.svg"
+            alt="Patient Delay Icon"
+            width={35}
+            height={35}
+          />
+
           <div className="text-sm text-yellow-700">
             Podes evitar la penalidad avisando 48hs antes en caso de que tengas
             algún inconveniente para asistir a tu turno.

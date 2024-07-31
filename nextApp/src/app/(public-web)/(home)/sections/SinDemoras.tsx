@@ -30,8 +30,8 @@ export function SinDemoras() {
               Demoras del profesional (20’)
             </h2>
             <p>
-              El paciente abona el 50% del valor del turno por el tiempo
-              perdido.
+              Se te cobraría hace un importante descuento sobre el turno por las
+              molestias ocasionadas
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export function SinDemoras() {
             height={45}
           />
           <div>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="text-2xl font-semibold mb-2">
               El paciente falta sin avisar 48hs antes
             </h3>
             <p>Se cobra una penalidad por respeto al tiempo</p>
